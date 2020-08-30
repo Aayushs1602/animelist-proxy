@@ -1,0 +1,12 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block body %}
+<link rel="stylesheet" href="{% static 'neumorphism.css' %}?{% now "U" %}"" />
+<div class="card bg-primary shadow-soft border-li mx-3 my-5 text-center">
+    <div class="card-body">
+<div id = "top">
+</div>
+<script src="{% static 'text1.js' %}?{% now "U" %}""></script>
+</div>
+</div>
+{% endblock body %}

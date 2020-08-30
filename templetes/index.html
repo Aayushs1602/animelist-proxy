@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myanimelist proxy-learning purpose</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}?{% now "U" %}"" />
+</head>
+<body>
+    <div class="flexsearch">
+        <div class="flexsearch--wrapper">
+            <form action="search" class="flexsearch--form" method="post">
+                {% csrf_token %}
+                <div class="flexsearch--input-wrapper">
+                    <input type="search" id="input_field" class="flexsearch--input" name="search" placeholder="Search" />
+                </div>
+                    <input type="submit" class="flexsearch--submit"  value="&#10140;" />
+            </form>
+        </div>
+    </div>
+    {% block body %}
+    <img src="https://cdn.discordapp.com/attachments/707651847866941575/749678230511943760/538943.jpg" class = "fitin"/>
+    {% endblock body %}
+</body>
+</html>
