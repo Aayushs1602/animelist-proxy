@@ -10,8 +10,8 @@ def index(request):
     return render(request, 'index.html')
 
 def v1(request):
-    if request.method == "POST":
-        name = request.POST.get('search')
+    if request.method == "GET":
+        name = request.GET.get('q')
         while True:
             try:
                 json_file = requests.get(f"https://api.jikan.moe/v3/search/anime?q={name}&page=1").json()
