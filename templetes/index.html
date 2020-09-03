@@ -10,10 +10,10 @@
 <body>
     <div class="flexsearch">
         <div class="flexsearch--wrapper">
-            <form action="search" class="flexsearch--form" method="post">
-                {% csrf_token %}
+            <form action="result" class="flexsearch--form" method="get">
+                {% comment %} {% csrf_token %} {% endcomment %}
                 <div class="flexsearch--input-wrapper">
-                    <input type="search" id="input_field" class="flexsearch--input" name="search" placeholder="Search" />
+                    <input type="search" id="input_field" class="flexsearch--input" name="q" placeholder="Search" />
                 </div>
                     <input type="submit" class="flexsearch--submit"  value="&#10140;" />
             </form>
