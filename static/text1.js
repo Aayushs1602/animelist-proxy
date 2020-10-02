@@ -10,7 +10,7 @@ fetch('static/anime.json')
         image_url = data.image_url
         str += `
         <div class="card post bg-primary shadow-soft border-light my-3" target="_blank" onclick="window.open('${data.url}')">
-        <div class="row no-gutters align-items-center">
+        <div class="row no-gutters align-items-center hov">
         <div class="col-md-4">
             <img src="${image_url}">
         </div>
